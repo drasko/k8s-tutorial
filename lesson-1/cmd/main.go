@@ -26,6 +26,7 @@ func main() {
 
 	r := chi.NewRouter()
 	r.Get("/status", status)
+
 	fmt.Println("Starting server at port 3333")
 	if err := http.ListenAndServe(":3333", r); err != nil {
 		fmt.Println("Error serving HTTP")
@@ -34,6 +35,7 @@ func main() {
 
 func status(w http.ResponseWriter, r *http.Request) {
 	logger.Info("status called", zap.String("method", r.Method))
+
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.WriteHeader(http.StatusOK)
 
