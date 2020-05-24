@@ -1,5 +1,4 @@
-# Lesson 1
-
+# Lesson 1 - Application
 This lesson covers basic steps:
 1. Application compilation
 2. Docker creation
