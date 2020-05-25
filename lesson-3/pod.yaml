@@ -9,5 +9,6 @@ spec:
   containers:
     - name: cont-l3
       image: k8s-tutorial/lesson-1:latest
+      imagePullPolicy: Never
       ports:
         - containerPort: 3333
