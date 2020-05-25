@@ -12,3 +12,4 @@ spec:
       imagePullPolicy: Never
       ports:
         - containerPort: 3333
+          hostPort: 3333

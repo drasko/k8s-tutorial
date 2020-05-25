@@ -6,7 +6,7 @@ Lot of information about pod deployment can be found [here](https://www.mirantis
 
 ## Creating Pod
 
-### Loading the image
+### Loading Image
 In order for image to be deployed on the Kind cluster, it must be loaded in the Kind nodes. Otherwise pod deployment will fail, as image will not be found.
 This process is described [here](https://kind.sigs.k8s.io/docs/user/quick-start/#loading-an-image-into-your-cluster).
 
@@ -31,8 +31,8 @@ kubectl create -f pod.yaml
 > pod/pod-l3 created
 
 kubectl get pods
-> NAME     READY   STATUS         RESTARTS   AGE
-> pod-l3   0/1     ErrImagePull   0          7s
+> NAME     READY   STATUS    RESTARTS   AGE
+> pod-l3   1/1     Running   0          6m51s
 ```
 
 To see more informations about the pod:
