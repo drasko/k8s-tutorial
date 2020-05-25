@@ -22,7 +22,7 @@ docker exec -it dd-cluster-control-plane crictl images
 > N.B. It should be noted that if image is tagget with `:latest`, then Kubernetes will always try to pull the image from the remote Docker registry.
 > This is why we are forcing `imagePullPolicy: Never` in [`pod.yaml`](pod.yaml).
 > Other way (and probably correct one) is never using `:latest`, i.e. always using versioned images. Then k8s will look for an image locally,
-> and try to pull it only if it is not present.
+> and try to pull it only if it is not present (more about this can be found [here](https://kubernetes.io/docs/concepts/configuration/overview/#container-images)).
 
 ### Creating Pod In The Cluster
 
